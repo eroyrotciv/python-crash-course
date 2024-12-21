@@ -1,3 +1,6 @@
-print("Hello Worlds!")
-print("Hello Worlds?? How many worlds do you think there are?")
-print("Infinite Worlds!")
+message = "Hello World!"
+print(message)
+
+message = "Hello Python Crash Course world!"
+print(message)
+
