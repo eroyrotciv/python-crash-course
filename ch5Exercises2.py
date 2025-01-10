@@ -25,9 +25,11 @@ for _ in new_users:
 print(usernames)
 
 # using ordinal numbers
-nums = []
+nums = [nums.append(n) for n in range(1, 10)] # trying to use list comprehension
+"""
 for _ in range(1, 10):
     nums.append(_)
+"""
 print(nums) # seeing values appended to list
 if nums:
     for n in nums:
