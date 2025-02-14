@@ -24,22 +24,3 @@ for _ in new_users:
 # showing that values have been appended to users
 print(usernames)
 
-# using ordinal numbers
-nums = [nums.append(n) for n in range(1, 10)] # trying to use list comprehension
-"""
-for _ in range(1, 10):
-    nums.append(_)
-"""
-print(nums) # seeing values appended to list
-if nums:
-    for n in nums:
-        if n == 1:
-            print(f"{n}st")
-        elif n == 2:
-            print(f"{n}nd")
-        elif n == 3:
-            print(f"{n}rd")
-        else:
-            print(f"{n}th")
-else:
-    print("Please add values to the list.")
