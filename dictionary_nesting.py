@@ -59,10 +59,68 @@ fave_languages = {
     'tyler': ['python'],
     'mom': ['c+', 'go'],
     'dad': ['kobal', 'basic'],
+    'ava': [],
 }
 
+# using 2 nested for loops to loop through the dictionary 
+# and through the list of values in the dictionary
 for name, languages in fave_languages.items():
     print(f"{name.title()}'s favorite languages are: ")
     for language in languages:
         print(f"\t{language.title()}")
+print("\n")
 
+# using an if statement inside for loop to determine if more than one favorite
+# language is listed
+for name, languages in fave_languages.items():
+    if len(languages) == 0:
+        print(
+            f"{name.title()}, looks like we don't have your favorite "
+            "language on file. Do you have one?"
+)
+    elif len(languages) == 1:
+        for language in languages:
+            print(f"{name.title()}'s favorite languge is {language.title()}.")
+    else:
+        print(
+            f"{name.title()}'s favorite languages are:"
+        )
+        for language in languages:
+            print(
+                f"\t{language.title()}"
+            )
+print("\n")
+
+# nesting a dictionary as values in a parent dictionary
+users = {
+    'vyore': {
+        'first_name': 'victor',
+        'last_name': 'yore',
+        'location': 'chase city',
+    },
+    'sprice': {
+        'first_name': 'stephanie',
+        'last_name': 'price',
+        'location': 'chase city',
+     },
+    'tpaz': {
+        'first_name': 'tyler',
+        'last_name': 'paz',
+        'location': 'farmville',
+    },
+    'jsmith': {
+        'first_name': 'john',
+        'last_name': 'smith',
+        'location': 'new york',
+    },
+}
+
+# using a for loop to iterate through the dictionary and the dictionaries stored
+# as values.
+for username, user_info in users.items():
+    print(f"\nUsername: {username}")
+    full_name = f"{user_info['first_name'].title()} {user_info['last_name'].title()}"
+    location = user_info['location']
+
+    print(f"\tFull name: {full_name.title()}")
+    print(f"\tLocation: {location.title()}")
